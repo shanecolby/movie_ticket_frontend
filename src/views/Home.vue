@@ -4,7 +4,9 @@
     <button v-on:click="moviesIndex()">Show Movies</button>
     <div v-for="movie in movies">
       {{movie.title}}
-      
+      <br>
+      Movie Id: {{movie.id}}
+      <p>
       <br>
       <!-- <button v-on:click="addToShowing(movie.id)">Click to purchase</button> -->
       <hr>

@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Showing from '../views/Showing.vue';
+import Theater from '../views/Theater.vue';
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,12 @@ const routes = [
     path: '/showing',
     name: 'Showing',
     component: Showing
+  },
+
+  {
+    path: '/theater',
+    name: 'Theater',
+    component: Theater
   },
 
 

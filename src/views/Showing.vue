@@ -4,6 +4,7 @@
      <button v-on:click="showingsIndex()">Show Times</button>
     <div v-for="showing in showings">
       {{showing}}
+      <p></p>
       </div>
   </div>
 </template>
