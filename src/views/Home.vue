@@ -34,7 +34,7 @@ export default {
       });
     },
     addToShowing: function (showing_id) {
-      // console.log("creating workout...");
+      console.log("creating showings...");
       console.log(showing_id);
 
       var params = {

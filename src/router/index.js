@@ -1,6 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import Showing from '../views/Showing.vue';
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,15 @@ const routes = [
     name: 'Home',
     component: Home
   },
+
+  {
+    path: '/showing',
+    name: 'Showing',
+    component: Home
+  },
+
+
+
   {
     path: '/about',
     name: 'About',
