@@ -1,18 +1,49 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{ message }}</h1>
+    <button v-on:click="moviesIndex()">Show Movies</button>
+    <div v-for="movie in movies">
+      {{movie.title}}
+      <br>
+      <button v-on:click="addToShowing(movie.id)">Click to purchase</button>
+      <hr>
+    </div>
   </div>
 </template>
 
+<style>
+</style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import axios from "axios";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  data: function () {
+    return {
+      message: "LaunchPad Movie-Lab",
+      movies: [],
+    };
+  },
+  created: function () {},
+  methods: {
+    moviesIndex: function () {
+      console.log("movies index...");
+      axios.get("/api/movies").then((response) => {
+        console.log(response.data);
+        this.movies = response.data;
+      });
+    },
+    addToShowing: function (showing_id) {
+      // console.log("creating workout...");
+      console.log(showing_id);
+
+      var params = {
+        movie_id: showing_id,
+      };
+      axios.post("/api/showings", params).then((response) => {
+        console.log(response.data);
+      });
+    },
+  },
+};
 </script>
