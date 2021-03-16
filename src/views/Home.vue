@@ -4,8 +4,9 @@
     <button v-on:click="moviesIndex()">Show Movies</button>
     <div v-for="movie in movies">
       {{movie.title}}
+      
       <br>
-      <button v-on:click="addToShowing(movie.id)">Click to purchase</button>
+      <!-- <button v-on:click="addToShowing(movie.id)">Click to purchase</button> -->
       <hr>
     </div>
   </div>
@@ -33,17 +34,17 @@ export default {
         this.movies = response.data;
       });
     },
-    addToShowing: function (showing_id) {
-      console.log("creating showings...");
-      console.log(showing_id);
+    // addToShowing: function (movie_id) {
+    //   console.log("creating showings...");
+    //   console.log(movie_id);
 
-      var params = {
-        movie_id: showing_id,
-      };
-      axios.post("/api/showings", params).then((response) => {
-        console.log(response.data);
-      });
-    },
+    //   var params = {
+    //     showng_id: movie_id,
+    //   };
+    //   axios.post("/api/showings", params).then((response) => {
+    //     console.log(response.data);
+    //   });
+    // },
   },
 };
 </script>
