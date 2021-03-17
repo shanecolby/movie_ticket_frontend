@@ -4,9 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/showing">Showings</router-link> |
       <router-link to="/theater">Theaters</router-link> |
-
-      
-      <router-link to="/about">About</router-link>
+      <router-link to="/admin">Admin Access</router-link> 
+    
       
     </div>
     <router-view/>

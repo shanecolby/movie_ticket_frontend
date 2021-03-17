@@ -7,8 +7,6 @@
       <br>
       Movie Id: {{movie.id}}
       <p>
-      <br>
-      <!-- <button v-on:click="addToShowing(movie.id)">Click to purchase</button> -->
       <hr>
     </div>
   </div>
@@ -36,17 +34,6 @@ export default {
         this.movies = response.data;
       });
     },
-    // addToShowing: function (movie_id) {
-    //   console.log("creating showings...");
-    //   console.log(movie_id);
-
-    //   var params = {
-    //     showng_id: movie_id,
-    //   };
-    //   axios.post("/api/showings", params).then((response) => {
-    //     console.log(response.data);
-    //   });
-    // },
   },
 };
 </script>
