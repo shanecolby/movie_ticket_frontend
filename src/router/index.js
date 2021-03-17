@@ -33,6 +33,8 @@ const routes = [
     component: Admin
   },
 
+
+
 ]
 
 const router = new VueRouter({

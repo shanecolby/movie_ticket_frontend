@@ -33,6 +33,7 @@ export default {
       });
     },
     createSale: function () {
+      console.log("creating sale...");
       var params = {
         showing_id: this.showing_id,
         customer_name: this.customer_name,
@@ -40,7 +41,7 @@ export default {
       };
       axios.post("/api/sales", params).then((response) => {
         console.log(response.data);
-        this.sales.push(response.data);
+        this.sales.push("/sales/create");
       });
     },
   },
